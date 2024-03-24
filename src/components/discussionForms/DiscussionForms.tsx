@@ -11,24 +11,23 @@ interface DiscussionFormsProps {
     avatar: string;
     location: string;
     description: string;
-
 }
 
 const DiscussionForms = ({name, avatar, location, description}: DiscussionFormsProps) => {
 
     return (
         <div
-                className="mx-auto cardWidth m-4 bg-white shadow-md rounded-lg overflow-hidden flex flex-row justify-center relative">
+            className="mx-auto cardWidth m-4 bg-white shadow-md rounded-lg overflow-hidden flex flex-col justify-center relative sm:flex-row max-sm:items-center">
             <Avatar src={avatar} alt="Avatar" className="m-4 h-20 w-20"/>
 
-            <div className="p-4">
-                <div className="flex flex-row gap-10">
-                    <h1 className="text-xl font-semibold">{name}</h1>
-                    <h2 className="rounded-2xl border border-blue-500 bg-blue-100 px-2 py-1">{location}</h2>
+            <div className="p-2 sm:p-4">
+                <div className="flex flex-col gap-2 max-sm:flex-row max-sm:justify-center sm:gap-10">
+                    <h1 className="text-lg lg:text-xl font-semibold">{name}</h1>
+                    <h2 className="rounded-xl border border-blue-500 bg-blue-100 px-2 py-1">{location}</h2>
                 </div>
                 <p className="mt-2 mb-2 text-gray-700">{description}</p>
 
-                <div className="flex justify-between items-center p-4 border-t border-gray-200">
+                <div className="flex justify-between items-center p-2 border-t border-gray-200 sm:p-4">
                     <IconButton
                         icon={(isActive: boolean) => isActive ? <FavoriteIcon className="text-pink-600 mr-2"/> :
                             <FavoriteBorderOutlinedIcon className="mr-2"/>}
@@ -52,8 +51,9 @@ const DiscussionForms = ({name, avatar, location, description}: DiscussionFormsP
                 </div>
 
             </div>
-            <small className="text-blue-500 absolute top-4 right-4"> 2 mins ago</small>
+            <small className="text-blue-500 absolute top-4 right-4 max-sm:top-2 max-sm:right-1"> 2 mins ago</small>
         </div>
     )
 }
+
 export default DiscussionForms;

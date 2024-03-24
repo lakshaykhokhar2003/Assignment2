@@ -18,12 +18,7 @@
 
 .cardWidth {
     width: 100%;
-    min-width: 500px;
     max-width: 600px;
 }
 
-@layer utilities {
-    .text-balance {
-        text-wrap: balance;
-    }
-}
+

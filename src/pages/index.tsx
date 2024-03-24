@@ -14,7 +14,7 @@ export default function Home() {
     const [showDiscussion, setShowDiscussion] = useState(true);
 
     const discussion = (<div className="border border-gray-300 p-10 mb-5 xl:mb-0 xl:w-1/2">
-        <h1 className={`text-4xl font-semibold mb-5 text-center ${inter.className}`}>
+        <h1 className={`text-4xl font-semibold mb-5 text-center max-sm:text-2xl ${inter.className}`}>
             Discussion Stories
         </h1>
         {dataArray.map((data) => (
